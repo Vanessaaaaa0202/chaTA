@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;title&gt;ChaTA&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.chat-title {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: linear-gradient(to bottom, #990000, #990000);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: rgb(255, 199,44);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 2em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-weight: bold;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 40px 20px; /* Increase padding vertically */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>min-height: 100vh;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>flex-direction: column;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-family: 'Arial', sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #f9f9f9;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.chat-container {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>flex-direction: column;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #fff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>max-height: 80vh; /* Decrease maximum height */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>overflow-y: auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.user-input {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>position: fixed;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>bottom: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>left: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>width: 98%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>box-shadow: 0 -2px 5px rgba(0,0,0,0.1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.user-input input {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>flex-grow: 1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-right: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: 1px solid #ccc;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.user-input button {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 10px 50px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #990000;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: rgb(255, 196, 44);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.user-input button:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #0056b3;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.chat-message {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 1.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 0.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-bottom: 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>flex-direction: column;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.chat-message.user {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #eee;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: black;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>justify-content: flex-end;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>align-self: flex-end;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.chat-message.bot {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #eee;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>justify-content: flex-start;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>align-self: flex-start;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.chat-message .avatar img {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>width: 50px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>height: 50px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 50%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-right: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.chat-message.user .avatar img {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>order: 2;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-right: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-left: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">  </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.chat-message .message {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="chat-container" id="chat-container"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h1 class="chat-title"&gt;chaTA&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- Chat messages will be added here --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="user-input" id="user-input"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;input type="text" id="user-message" placeholder="Type your message here..."&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;button onclick="sendMessage()"&gt;GO Trojan&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>&lt;!-- JavaScript --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function loadChatHistory() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const chatHistory = JSON.parse(localStorage.getItem('chatHistory') || '[]');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>chatHistory.forEach(({ sender, message }) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>displayMessage(sender, message);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function sendMessage() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const userInput = document.getElementById('user-message');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const userMessage = userInput.value.trim();</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (userMessage) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>displayMessage('user', userMessage);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>saveChatHistory('user', userMessage);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>getChatbotResponse(userMessage);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>userInput.value = ''; // Clear the input field after sending</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function displayMessage(sender, message) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>console.log('Display message function called with sender:', sender, 'and message:', message);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const chatContainer = document.getElementById('chat-container');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const messageElement = document.createElement('div');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>messageElement.classList.add('chat-message', sender);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const avatarElement = document.createElement('div');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>avatarElement.classList.add('avatar');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const avatarImage = document.createElement('img');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>avatarImage.src = sender === 'user' ? 'https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png' : 'https://images.thdstatic.com/productImages/820d4b0d-d1a5-47e9-a6e8-0fa3b0b51dd9/svn/gloss-finish-wall-sculptures-ncusct-210-04-64_600.jpg';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>avatarElement.appendChild(avatarImage);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const messageContent = document.createElement('div');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>messageContent.classList.add('message');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// Check if the message contains a video link</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (sender === 'bot' &amp;&amp; message.includes('https://youtu.be/')) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Extract video ID and timestamp</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const videoUrlMatch = message.match(/https:\/\/youtu\.be\/([a-zA-Z0-9_-]+)\?t=(\d+)/);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if (videoUrlMatch &amp;&amp; videoUrlMatch.length &gt; 1) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const videoId = videoUrlMatch[1];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const timestamp = videoUrlMatch[2];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const embedUrl = `https://www.youtube.com/embed/${videoId}?start=${timestamp}`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>// Remove the URL from the message text</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const messageText = message.replace(videoUrlMatch[0], '');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>messageContent.textContent = messageText;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>// Create the video iframe</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const videoFrame = document.createElement('iframe');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>videoFrame.src = embedUrl;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>videoFrame.width = "560";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>videoFrame.height = "315";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>videoFrame.frameBorder = "0";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>videoFrame.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>videoFrame.allowFullscreen = true;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>// Add the text content first, then add the video iframe</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>messageElement.appendChild(avatarElement);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>messageElement.appendChild(messageContent);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>messageElement.appendChild(videoFrame);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>messageContent.textContent = message;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>messageElement.appendChild(avatarElement);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>messageElement.appendChild(messageContent);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>chatContainer.appendChild(messageElement);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>chatContainer.scrollTop = chatContainer.scrollHeight; // Scroll to the bottom</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>async function getChatbotResponse(userMessage) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>try {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const response = await fetch('/chat', {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>method: 'POST',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>headers: {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>'Content-Type': 'application/json',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>body: JSON.stringify({ message: userMessage }),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if (response.ok) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>const data = await response.json();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>displayMessage('bot', data.response);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>saveChatHistory('bot', data.response);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>console.error('Error in bot response:', response.statusText);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>} catch (error) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>console.error('Failed to get bot response:', error);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function saveChatHistory(sender, message) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const chatHistory = JSON.parse(localStorage.getItem('chatHistory') || '[]');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>chatHistory.push({ sender, message });</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>localStorage.setItem('chatHistory', JSON.stringify(chatHistory));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
